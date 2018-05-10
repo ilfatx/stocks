@@ -1,0 +1,19 @@
+<h3>Stocks</h3>
+<p *ngIf="loading"><em>Loading...</em></p>
+<button (click)="onReload()">Reload</button>
+<table class='table' *ngIf="!loading">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Volume</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stocks" class="table-cell">
+            <td>{{ stock.name }}</td>
+            <td>{{ stock.volume }}</td>
+            <td>{{ stock.price.amount.toFixed(2) }}</td>
+        </tr>
+    </tbody>
+</table>
