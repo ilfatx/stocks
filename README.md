@@ -1,1 +1,1 @@
-# stocks
+Test project with ASP.NET Core and Angular5
